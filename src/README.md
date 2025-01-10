@@ -102,6 +102,7 @@ model=CreateModel((13,21,2),n_filters=5,pool_size=3)
 model.summary()
 ```
 This generates a model with the following architecture:
+
 | Type                 | Output Shape        | Parameters |
 |----------------------|---------------------|------------|
 | InputLayer           | `(None, 13, 21, 2)`| 0          |
