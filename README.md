@@ -1,1 +1,0 @@
-# smart-pix.github.io
