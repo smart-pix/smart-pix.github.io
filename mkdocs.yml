@@ -1,5 +1,5 @@
 site_name: Smart Pixels ML Docs
-site_url: https://smart-pix.github.io/documentation
+site_url: https://smart-pix.github.io
 repo_url: https://github.com/smart-pix/smart-pix.github.io
 use_directory_urls: false
 nav:
