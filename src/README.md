@@ -103,21 +103,82 @@ model.summary()
 ```
 This generates a model with the following architecture:
 
-| Type                 | Output Shape        | Parameters |
-|----------------------|---------------------|------------|
-| InputLayer           | `(None, 13, 21, 2)`| 0          |
-| QSeparableConv2D     | `(None, 11, 19, 5)`| 33         |
-| QActivation          | `(None, 11, 19, 5)`| 0          |
-| QConv2D              | `(None, 11, 19, 5)`| 30         |
-| QActivation          | `(None, 11, 19, 5)`| 0          |
-| AveragePooling2D     | `(None, 3, 6, 5)` | 0          |
-| QActivation          | `(None, 3, 6, 5)` | 0          |
-| Flatten              | `(None, 90)` | 0          |
-| QDense               | `(None, 16)` | 1456       |
-| QActivation          | `(None, 16)` | 0          |
-| QDense               | `(None, 16)` | 272        |
-| QActivation          | `(None, 16)` | 0          |
-| QDense               | `(None, 14)` | 238        |
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Output Shape</th>
+      <th>Parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>InputLayer</td>
+      <td>(None, 13, 21, 2)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QSeparableConv2D</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QConv2D</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>AveragePooling2D</td>
+      <td>(None, 3, 6, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 3, 6, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Flatten</td>
+      <td>(None, 90)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QDense</td>
+      <td>(None, 16)</td>
+      <td>1456</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 16)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QDense</td>
+      <td>(None, 16)</td>
+      <td>272</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 16)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QDense</td>
+      <td>(None, 14)</td>
+      <td>238</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Model Evaluation
 Refer to [Evaluate](api/evaluate.md) for more details

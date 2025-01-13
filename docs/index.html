@@ -883,22 +883,84 @@ Refer to <a href="api/data_generator.html">data generator</a> for more details.<
 <span class="n">model</span><span class="o">=</span><span class="n">CreateModel</span><span class="p">((</span><span class="mi">13</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">n_filters</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">pool_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
 </code></pre></div>
-This generates a model with the following architecture:
-| Type                 | Output Shape        | Parameters |
-|----------------------|---------------------|------------|
-| InputLayer           | <code>(None, 13, 21, 2)</code>| 0          |
-| QSeparableConv2D     | <code>(None, 11, 19, 5)</code>| 33         |
-| QActivation          | <code>(None, 11, 19, 5)</code>| 0          |
-| QConv2D              | <code>(None, 11, 19, 5)</code>| 30         |
-| QActivation          | <code>(None, 11, 19, 5)</code>| 0          |
-| AveragePooling2D     | <code>(None, 3, 6, 5)</code> | 0          |
-| QActivation          | <code>(None, 3, 6, 5)</code> | 0          |
-| Flatten              | <code>(None, 90)</code> | 0          |
-| QDense               | <code>(None, 16)</code> | 1456       |
-| QActivation          | <code>(None, 16)</code> | 0          |
-| QDense               | <code>(None, 16)</code> | 272        |
-| QActivation          | <code>(None, 16)</code> | 0          |
-| QDense               | <code>(None, 14)</code> | 238        |</p>
+This generates a model with the following architecture:</p>
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Output Shape</th>
+      <th>Parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>InputLayer</td>
+      <td>(None, 13, 21, 2)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QSeparableConv2D</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QConv2D</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 11, 19, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>AveragePooling2D</td>
+      <td>(None, 3, 6, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 3, 6, 5)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Flatten</td>
+      <td>(None, 90)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QDense</td>
+      <td>(None, 16)</td>
+      <td>1456</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 16)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QDense</td>
+      <td>(None, 16)</td>
+      <td>272</td>
+    </tr>
+    <tr>
+      <td>QActivation</td>
+      <td>(None, 16)</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>QDense</td>
+      <td>(None, 14)</td>
+      <td>238</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="model-evaluation">Model Evaluation<a class="headerlink" href="#model-evaluation" title="Permanent link">#</a></h2>
 <p>Refer to <a href="api/evaluate.html">Evaluate</a> for more details</p>
 
